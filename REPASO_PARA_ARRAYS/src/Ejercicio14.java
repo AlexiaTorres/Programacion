@@ -30,9 +30,6 @@ while (i <= a.length - b.length){
  }
  
 System.out.println(c);
-
-
-
 	}
 
 }
