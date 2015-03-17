@@ -12,7 +12,7 @@ public class NumeroEntero {
 			System.out.println("Introduce un número entero");
 			x=teclado.nextInt();
 			System.out.println(x);
-		}catch(Exception InputMismatchException){
+		}catch(Exception e){
 			System.out.println("No es un número entero");
 		}
 		

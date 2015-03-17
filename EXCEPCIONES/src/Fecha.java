@@ -16,9 +16,9 @@ public Fecha(int dia,int mes,int año){
 	
 public String toString(){
 	
-	String s="";
-	s=this.dia+"/"+this.mes+"/"+this.año;
-	return s;
+	
+	return this.dia+"/"+this.mes+"/"+this.año;
+	
 }
 	
 public void validarFecha()throws FechaIncorrecta{

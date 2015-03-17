@@ -1,71 +1,69 @@
 
 public class Alumno implements Comparable {
-
 	private String nombre;
 	private String dni;
 	private int notaBd;
-	private int notaEntornos;
 	private int notaPro;
+	private int notaEntor;
 	
-	public Alumno(){
+	public Alumno (){
 		
 	}
-	
-	public Alumno(String nombre, String dni, int notaBd, int notaEntornos, int notaPro){
+	public Alumno(String nombre, String dni, int notaBd, int notaPro, int notaEntor){
 		this.nombre=nombre;
+		this.dni=dni;
 		this.notaBd=notaBd;
-		this.notaEntornos=notaEntornos;
 		this.notaPro=notaPro;
-	}
-	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.notaEntor=notaEntor;
 	}
 	public String getNombre() {
 		return nombre;
 	}
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 	public String getDni() {
 		return dni;
 	}
-	public void setNotaBd(int notaBd) {
-		this.notaBd = notaBd;
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 	public int getNotaBd() {
 		return notaBd;
 	}
-	public void setNotaEntornos(int notaEntornos) {
-		this.notaEntornos = notaEntornos;
-	}
-	public int getNotaEntornos() {
-		return notaEntornos;
-	}
-	public void setNotaPro(int notaPro) {
-		this.notaPro = notaPro;
+	public void setNotaBd(int notaBd) {
+		this.notaBd = notaBd;
 	}
 	public int getNotaPro() {
 		return notaPro;
 	}
+	public void setNotaPro(int notaPro) {
+		this.notaPro = notaPro;
+	}
+	public int getNotaEntor() {
+		return notaEntor;
+	}
+	public void setNotaEntor(int notaEntor) {
+		this.notaEntor = notaEntor;
+	}
+	public int compareTo(Object o){
+		Alumno a=(Alumno)o;
+		return this.nombre.compareTo(a.nombre);
+	}
 	
-    @Override
-    public String toString() {
-    	// TODO Auto-generated method stub
-    	return super.toString();
-    }
-    
-    public int compareTo(Object o){
-    	Alumno a=(Alumno)o;
-    	return this.nombre.compareTo(a.nombre);
-    }
-    
-    public double media(){
-    	int suma= this.notaBd+this.notaEntornos+this.notaPro;
-    	double media=suma/3;
-    	return media;
-    }
-    
-    
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", dni=" + dni + ", notaBd="
+				+ notaBd + ", notaPro=" + notaPro + ", notaEntor=" + notaEntor
+				+ "]";
+	}
+	public double media(){
+		int suma=this.notaPro+this.notaBd+this.notaEntor;
+		double media=suma/3.0;
+		return media;
+		
+	}
+	
+	
 
 }

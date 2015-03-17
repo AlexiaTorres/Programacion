@@ -40,6 +40,35 @@ public String toString(){
 	return s;
 	}
 
+
+public void addMedio(int dato){
+	Nodo nuevo=new Nodo(dato);
+	Nodo p,q;
+	
+	p=this.inicio;
+	if(p==null){ //si la lista está vacia
+	  this.insertarPrincipio(dato);	
+	}else{
+		if(this.inicio.getInfo()>nuevo.getInfo()){
+			this.insertarPrincipio(dato);
+		} else{
+			p=this.inicio;
+			while(p.getInfo()<nuevo.getInfo()){
+				p=p.getSig();
+			}
+			q=this.inicio;
+			while(q.getSig()!=p){
+				q=q.getSig();
+			}
+			q.setSig(nuevo);
+			nuevo.setSig(p);
+		}
+	}
+}
+
+
+
+
 //AÑADIR POR PRINCIPIO
 public void insertarPrincipio(int dato){
 	Nodo n=new Nodo(dato);

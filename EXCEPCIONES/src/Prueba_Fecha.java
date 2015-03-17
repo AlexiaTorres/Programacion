@@ -6,8 +6,6 @@ public class Prueba_Fecha {
 		
 		f1.validarFecha();
 		f2.validarFecha();
-		
-
 	}
 
 }
